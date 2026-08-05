@@ -1,0 +1,38 @@
+# ── LLM / Agent framework ────────────────────────────────────────────
+langchain>=0.3.27
+langchain-core>=0.3.75
+langchain-openai>=0.3.0
+langchain-anthropic>=0.3.0
+langgraph>=0.6.0
+langgraph-checkpoint>=2.0.0
+
+# ── Web backend ──────────────────────────────────────────────────────
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+pydantic>=2.8.0
+pydantic-settings>=2.4.0
+
+# ── 소스 확보 ────────────────────────────────────────────────────────
+yt-dlp>=2025.1.1
+httpx>=0.27.0
+
+# ── 나레이션 TTS ─────────────────────────────────────────────────────
+# 무료, API 키 불필요. TTS_PROVIDER=edge (기본값) 에서 사용합니다.
+edge-tts>=6.1.12
+
+# ── 자막/렌더 ────────────────────────────────────────────────────────
+Pillow>=10.4.0
+
+# ffmpeg / ffprobe 는 시스템 바이너리입니다.
+#   macOS  : brew install ffmpeg
+#   Ubuntu : sudo apt install ffmpeg
+#   Windows: winget install Gyan.FFmpeg
+
+# ── STT + 화자분리 (선택: STT_PROVIDER=whisperx 일 때 필요) ──────────
+# 용량이 크고 GPU 를 쓰므로 기본 설치에서 제외했습니다.
+# 아래를 별도로 설치하세요:
+#
+#   pip install -r requirements-stt.txt
+#
+# 설치 없이도 STT_PROVIDER=subtitles (유튜브 자막 재활용) 로 전체
+# 파이프라인이 동작합니다.

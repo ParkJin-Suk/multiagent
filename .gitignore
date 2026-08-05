@@ -1,0 +1,13 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+node_modules/
+frontend/dist/
+output/
+secrets/
+/tmp_media/
+assets/fonts/*.ttf
+assets/fonts/*.otf
+assets/fonts/*.ttc
+.DS_Store
